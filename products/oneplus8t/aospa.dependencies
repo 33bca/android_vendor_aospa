@@ -7,6 +7,12 @@
     },
     {
         "remote":       "aospa",
+        "repository":   "33bca/android_device_oneplus_common",
+        "target_path":  "device/oneplus/common",
+        "revision":     "sapphire"
+    },
+    {
+        "remote":       "aospa",
         "repository":   "33bca/android_device_oneplus_oneplus8t",
         "target_path":  "device/oneplus/oneplus8t",
         "revision":     "sapphire"
