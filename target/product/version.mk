@@ -56,7 +56,16 @@ endif
 BUILD_DATE := $(shell date -u +%Y%m%d)
 
 # AOSPA Version
-AOSPA_VERSION := $(AOSPA_MAJOR_VERSION)-$(AOSPA_MINOR_VERSION)-$(AOSPA_BUILD)-$(AOSPA_BUILD_VARIANT)-$(BUILD_DATE)
+AOSPA_VERSION := \
+    $(AOSPA_MAJOR_VERSION)- \
+    ifeq ($(filter release,$(AOSPA_BUILD_VARIANT)),)
+    $(AOSPA_BUILD_VARIANT)- \
+    endif
+    ifeq ($(filter unofficial,$(AOSPA_BUILD_VARIANT)),)
+    $(AOSPA_MINOR_VERSION)- \
+    endif
+    $(AOSPA_BUILD)- \
+    $(BUILD_DATE)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.aospa.version=$(AOSPA_VERSION)
