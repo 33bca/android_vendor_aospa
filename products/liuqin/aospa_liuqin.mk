@@ -17,18 +17,18 @@ $(call inherit-product, device/xiaomi/liuqin/device.mk)
 TARGET_NO_TELEPHONY := true
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
-PRODUCT_BRAND := xiaomi
+PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := liuqin
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 23046RP50C
 PRODUCT_NAME := aospa_liuqin
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=liuqin \
     TARGET_PRODUCT=liuqin
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1440
+
 endif
