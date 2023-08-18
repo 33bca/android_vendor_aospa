@@ -31,4 +31,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# ParanoidHub
+PRODUCT_PACKAGES += \
+    ParanoidHub \
+    ParanoidHubOverlay
+
 endif
