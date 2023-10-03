@@ -19,6 +19,12 @@
     },
     {
         "remote":       "aospa",
+        "repository":   "33bca/android_device_xiaomi_sepolicy",
+        "target_path":  "device/xiaomi/sepolicy",
+        "revision":     "topaz"
+    },
+    {
+        "remote":       "aospa",
         "repository":   "AOSPA/android_hardware_xiaomi",
         "target_path":  "hardware/xiaomi",
         "revision":     "topaz"
