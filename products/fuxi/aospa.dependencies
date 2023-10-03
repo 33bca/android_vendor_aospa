@@ -1,7 +1,7 @@
 [
     {
-        "remote":       "aospa",
-        "repository":   "xiaomi-8550/android_device_xiaomi_fuxi",
+        "remote":       "github-ssh",
+        "repository":   "33bca/android_device_xiaomi_fuxi",
         "target_path":  "device/xiaomi/fuxi",
         "revision":     "topaz"
     },
