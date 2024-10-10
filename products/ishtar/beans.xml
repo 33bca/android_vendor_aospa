@@ -10,7 +10,7 @@
   <project path="device/xiaomi/ishtar-kernel" name="xiaomi-8550/android_device_xiaomi_ishtar-kernel" remote="aospa" revision="vauxite" clone-depth="1" />
   <project path="device/xiaomi/sepolicy" name="AOSPA/android_device_xiaomi_sepolicy" remote="aospa" revision="vauxite" />
   <project path="device/xiaomi/sm8550-common" name="xiaomi-8550/android_device_xiaomi_sm8550-common" remote="aospa" revision="vauxite" />
-  <project path="hardware/xiaomi" name="AOSPA/android_hardware_xiaomi" remote="aospa" revision="vauxite" />
+  <project path="hardware/xiaomi" name="xiaomi-8550/android_hardware_xiaomi" remote="aospa" revision="vauxite" />
   <project path="vendor/xiaomi" name="xiaomi-8550/proprietary_vendor_xiaomi" remote="aospa" revision="vauxite"/>
   <project path="vendor/xiaomi/camera" name="proprietary_vendor_xiaomi_camera" remote="blobs-gitlab" revision="vauxite-sm8550-leica" clone-depth="1" />
 </manifest>
