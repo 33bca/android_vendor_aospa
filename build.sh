@@ -41,6 +41,7 @@ function showHelpAndExit {
         echo -e "${CLR_BLD_BLU}  -j, --jobs            Specify jobs/threads to use${CLR_RST}"
         echo -e "${CLR_BLD_BLU}  -m, --module          Build a specific module${CLR_RST}"
         echo -e "${CLR_BLD_BLU}  -s, --sign-keys       Specify path to sign key mappings${CLR_RST}"
+        echo -e "${CLR_BLD_BLU}  -k, --skip-kernel-platform Allow to skip kernel_platform rebuild ${CLR_RST}"
         echo -e "${CLR_BLD_BLU}  -p, --pwfile          Specify path to sign key password file${CLR_RST}"
         echo -e "${CLR_BLD_BLU}  -b, --backup-unsigned Store a copy of unsigned package along with signed${CLR_RST}"
         echo -e "${CLR_BLD_BLU}  -d, --delta           Generate a delta ota from the specified target_files zip${CLR_RST}"
@@ -50,8 +51,8 @@ function showHelpAndExit {
 }
 
 # Setup getopt.
-long_opts="help,clean,installclean,repo-sync,variant:,build-type:,jobs:,module:,sign-keys:,pwfile:,backup-unsigned,delta:,imgzip,version:"
-getopt_cmd=$(getopt -o hcirv:t:j:m:s:p:bd:zn: --long "$long_opts" \
+long_opts="help,clean,installclean,repo-sync,variant:,build-type:,jobs:,module:,sign-keys:,skip-kernel-platform:,pwfile:,backup-unsigned,delta:,imgzip,version:"
+getopt_cmd=$(getopt -o hcirv:t:j:m:s:k:p:bd:zn: --long "$long_opts" \
             -n $(basename $0) -- "$@") || \
             { echo -e "${CLR_BLD_RED}\nError: Getopt failed. Extra args\n${CLR_RST}"; showHelpAndExit; exit 1;}
 
@@ -68,6 +69,7 @@ while true; do
         -j|--jobs|j|jobs) JOBS="$2"; shift;;
         -m|--module|m|module) MODULES+=("$2"); echo $2; shift;;
         -s|--sign-keys|s|sign-keys) KEY_MAPPINGS="$2"; shift;;
+        -k|--skip-kernel-platform|k|skip-kernel-platform) FLAG_SKIP_KERNEL_PLATFORM="y"; shift;;
         -p|--pwfile|p|pwfile) PWFILE="$2"; shift;;
         -b|--backup-unsigned|b|backup-unsigned) FLAG_BACKUP_UNSIGNED=y;;
         -d|--delta|d|delta) DELTA_TARGET_FILES="$2"; shift;;
@@ -200,7 +202,7 @@ echo -e "${CLR_BLD_BLU}Starting compilation${CLR_RST}"
 echo -e ""
 
 # Build kernel platform if it exists and the kernel version is supported
-if [ -d "$DIR_ROOT/kernel_platform/" ] && (
+if [ -d "$DIR_ROOT/kernel_platform/" ] && [ "${FLAG_SKIP_KERNEL_PLATFORM}" != 'y' ] && (
    [ "${TARGET_KERNEL_VERSION}" != "4.4" ] &&
    [ "${TARGET_KERNEL_VERSION}" != "4.9" ] &&
    [ "${TARGET_KERNEL_VERSION}" != "4.14" ] &&
