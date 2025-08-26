@@ -22,7 +22,10 @@ PRODUCT_MODEL := fuxi
 PRODUCT_NAME := aospa_fuxi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=fuxi
+    DeviceName=fuxi \
+    DeviceProduct=fuxi \
+    SystemDevice=fuxi \
+    SystemName=fuxi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
