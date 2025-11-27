@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2023 Paranoid Android
-#
+# SPDX-FileCopyrightText: Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -11,10 +10,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from the device configuration.
+TARGET_NO_NFC := true
+TARGET_NO_TELEPHONY := true
+TARGET_NO_VIBRATOR := true
 $(call inherit-product, device/xiaomi/liuqin/device.mk)
 
 # Inherit from the AOSPA configuration.
-TARGET_NO_TELEPHONY := true
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 PRODUCT_BRAND := Xiaomi
