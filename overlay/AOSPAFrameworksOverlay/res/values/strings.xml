@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     SPDX-FileCopyrightText: Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="android_start_title" translatable="false">Paranoid Android is starting…</string>
+    <string name="android_upgrading_title" translatable="false">Paranoid Android is updating…</string>
+</resources>
