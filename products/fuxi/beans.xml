@@ -39,7 +39,7 @@
   <!-- Device Dependencies -->
   <project path="device/xiaomi/fuxi" name="xiaomi-8550/android_device_xiaomi_fuxi" remote="aospa" revision="beryl" />
   <project path="device/xiaomi/sepolicy" name="AOSPA/android_device_xiaomi_sepolicy" remote="aospa" revision="beryl" />
-  <project path="device/xiaomi/sm8550-common" name="xiaomi-8550/android_device_xiaomi_sm8550-common" remote="aospa" revision="beryl" />
+  <project path="device/xiaomi/sm8550-common" name="xiaomi-8550/android_device_xiaomi_sm8550-common" remote="aospa" revision="calcite" />
   <project path="hardware/xiaomi" name="AOSPA/android_hardware_xiaomi" remote="aospa" revision="beryl" />
   <project path="vendor/xiaomi/camera" name="proprietary_vendor_xiaomi_camera" remote="blobs-gitlab" revision="beryl-sm8550-leica" />
   <project path="vendor/xiaomi/fuxi" name="xiaomi-8550/proprietary_vendor_xiaomi_fuxi" remote="aospa" revision="beryl" />
