@@ -34,7 +34,7 @@
   <project remote="clo-la" name="platform/vendor/qcom/opensource/graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="309700425f4b5e761ca3ade9017f12a803aac5a6" upstream="refs/heads/gfx-kernel.lnx.1.0.r2-rel" />
   <!-- AU_LINUX_KERNEL.PLATFORM.2.0.R1.00.00.00.004.204 -->
   <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="b626c6a5410cccea4d6b13bc90f74fc7dce37d9b" upstream="refs/heads/uefi.lnx.4.0.r1-rel" />
-  <project name="AOSPA/kernel_platform_build" path="kernel_platform/build/kernel" remote="aospa" revision="kailua">
+  <project name="xiaomi-8550/kernel_platform_build" path="kernel_platform/build/kernel" remote="aospa" revision="kailua">
     <linkfile dest="kernel_platform/build/build.sh" src="build.sh" />
     <linkfile dest="kernel_platform/build/build_abi.sh" src="build_abi.sh" />
     <linkfile dest="kernel_platform/build/build_test.sh" src="build_test.sh" />
