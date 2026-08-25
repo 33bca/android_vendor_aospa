@@ -79,7 +79,7 @@
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/mmrm_kernel_board.mk" src="mmrm_kernel_board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/mmrm_kernel_product.mk" src="mmrm_kernel_product.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver" revision="c6943f2aa3ebd103f2691ea7904cf12379100d70" upstream="refs/heads/video-kernel.lnx.1.0.r1-rel" groups="cyborg">
+  <project name="xiaomi-8550/vendor_qcom_opensource_video-driver" path="vendor/qcom/opensource/video-driver" remote="aospa" revision="kailua">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/video_kernel_product.mk" src="video_kernel_product.mk" />
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/video_kernel_board.mk" src="video_kernel_board.mk" />
   </project>
